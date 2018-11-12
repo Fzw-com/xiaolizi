@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id = 'money'/>
+        <script src = "./js/jquery.min.js"></script>
+        <script>
+            $('#money').change(function(){
+                console.log($('#money').val())
+                var num = $('#money').val();
+                var exp = /^([1-9][\d]{0,7}|0)(\.[\d]{1,2})?$/;
+                if(exp.test(num)){
+                    alert('right');
+                }else{
+                    alert('wrong');
+                }
+            })
+        </script>
+    </body>
+</html>
